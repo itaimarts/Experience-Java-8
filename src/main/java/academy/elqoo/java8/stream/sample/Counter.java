@@ -1,4 +1,4 @@
-package academy.elqoo.java8.stream;
+package academy.elqoo.java8.stream.sample;
 
 import java.util.stream.LongStream;
 

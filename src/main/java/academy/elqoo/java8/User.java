@@ -1,4 +1,4 @@
-package academy.elqoo.java8.stream;
+package academy.elqoo.java8;
 
 import java.util.ArrayList;
 import java.util.List;
