@@ -8,150 +8,101 @@ import java.util.stream.*;
 public class Stream8 {
 
   public static List<Integer> returnSquareRoot(List<Integer> numbers) {
-    return numbers.stream()
-        .map(num -> (int) (Math.sqrt(num)))
-        .collect(Collectors.toList());
+    return null;
   }
 
   public static List<Integer> getAgeFromUsers(List<User> user) {
-    return user.stream()
-        .map(User::getAge).collect(Collectors.toList());
+    return null;
   }
 
   public static List<Integer> getDistinctAges(List<User> users) {
-    return users.stream()
-        .map(User::getAge)
-        .distinct()
-        .collect(Collectors.toList());
+    return null;
   }
 
   public static List<User> getLimitedUserList(List<User> users, int limit) {
-    return users.stream()
-        .limit(limit)
-        .collect(Collectors.toList());
+    return null;
   }
 
   public static Integer countUsersOlderThen25(List<User> users) {
-    long count = users.stream()
-        .filter(user -> user.getAge() > 25)
-        .count();
-    return Math.toIntExact(count);
+    return null;
   }
 
   public static List<String> mapToUpperCase(List<String> strings) {
-    return strings.stream()
-        .map(String::toUpperCase)
-        .collect(Collectors.toList());
+    return null;
   }
 
   public static Integer sum(List<Integer> integers) {
-    return integers.stream()
-        .mapToInt(Integer::intValue)
-        .sum();
+    return null;
   }
 
   public static List<Integer> skip(List<Integer> integers, Integer toSkip) {
-    return integers.stream()
-        .skip(toSkip)
-        .collect(Collectors.toList());
+    return null;
   }
 
   public static List<String> getFirstNames(List<String> names) { //from {"Homer Simpson", "Marge Simpson"} you should return
     // {"Homer", "Marge"}
-    return names.stream()
-        .map(name -> name.split(" ")[0])
-        .collect(Collectors.toList());
+    return null;
   }
 
   public static List<String> getDistinctLetters(List<String> names) {
-    return names.stream()
-        .flatMap(name -> Stream.of(name.split("")))
-        .distinct()
-        .collect(Collectors.toList());
+    return null;
   }
 
 
   public static String separateNamesByComma(List<User> users) {
-    return users.stream()
-        .map(User::getName)
-        .collect(Collectors.joining(", "));
+    return null;
   }
 
   public static double getAverageAge(List<User> users) {
-    return users.stream()
-        .mapToInt(User::getAge)
-        .average()
-        .getAsDouble();
+    return 0;
   }
 
   public static Integer getMaxAge(List<User> users) {
-    return users.stream()
-        .mapToInt(User::getAge)
-        .max()
-        .getAsInt();
+    return null;
   }
 
   public static Integer getMinAge(List<User> users) {
-    return users.stream()
-        .mapToInt(User::getAge)
-        .min()
-        .getAsInt();
+    return null;
   }
 
   public static Map<Boolean, List<User>> partionUsersByGender(List<User> users) {
-    return users.stream()
-        .collect(Collectors.groupingBy(User::isMale));
+    return null;
   }
 
   public static Map<Integer, List<User>> groupByAge(List<User> users) {
-    return users.stream()
-        .collect(Collectors.groupingBy(User::getAge));
+    return null;
   }
 
   public static Map<Boolean, Map<Integer, List<User>>> groupByGenderAndAge(List<User> users) {
-    return users.stream()
-        .collect(Collectors.groupingBy(User::isMale,
-            Collectors.groupingBy(User::getAge)));
+    return null;
   }
 
   public static Map<Boolean, Long> countGender(List<User> users) {
-    return users.stream()
-        .collect(Collectors.groupingBy(User::isMale,
-            Collectors.counting()));
+    return null;
   }
 
   public static boolean anyMatch(List<User> users, int age) {
-    return users.stream()
-        .anyMatch(user -> user.getAge().equals(age));
+    return false;
   }
 
   public static boolean noneMatch(List<User> users, int age) {
-    return users.stream()
-        .noneMatch(user -> user.getAge().equals(age));
+    return false;
   }
 
   public static Optional<User> findAny(List<User> users, String name) {
-    return users.stream()
-        .filter(user -> user.getName().equals(name))
-        .findAny();
+    return null;
   }
 
   public static List<User> sortByAge(List<User> users) {
-    return users.stream()
-        .sorted(Comparator.comparingInt(User::getAge))
-        .collect(Collectors.toList());
+    return null;
   }
 
   public static Stream<Integer> getBoxedStream(IntStream stream) {
-    return stream.boxed();
+    return null;
   }
 
   public static List<Integer> generateFirst10PrimeNumbers() {
-    return IntStream.iterate(2, i -> i + 1)
-        .filter(Stream8::isPrime)
-        .limit(10)
-        .boxed()
-        .collect(Collectors.toList());
+    return null;
   }
 
   public static boolean isPrime(int number) {
@@ -159,36 +110,23 @@ public class Stream8 {
   }
 
   public static List<Integer> generate10RandomNumbers() {
-    return new Random()
-        .ints()
-        .boxed()
-        .limit(10)
-        .collect(Collectors.toList());
+    return null;
   }
 
   public static User findOldest(List<User> users) {
-    return users.stream()
-        .max(Comparator
-            .comparingInt(User::getAge))
-        .get();
+    return null;
   }
 
   public static int sumAge(List<User> users) {
-    return users.stream()
-        .mapToInt(User::getAge)
-        .sum();
+    return 0;
   }
 
   public static IntSummaryStatistics ageSummaryStatistics(List<User> users) {
-    return users.stream()
-        .mapToInt(User::getAge)
-        .summaryStatistics();
+    return null;
   }
 
   public static int getMultiplicationUsingReduce(List<Integer> numbers) {
-    return numbers.stream()
-        .reduce(Math::multiplyExact)
-        .get();
+    return 0;
   }
 
 }
